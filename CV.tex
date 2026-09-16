@@ -120,11 +120,22 @@
 \centerline{\normalsize{\faGraduationCap\ 浙江大学车辆工程 \quad \faGithubSquare\ \href{https://github.com/dhu977668-netizen}{https://github.com/dhu977668-netizen}}}
 
 
+\section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ 个人概述}
+\begin{itemize}[nosep]
+    \item 浙江大学车辆工程本科在读，形成\textbf{车辆动力系统、电子控制、建模与仿真}交叉知识结构。
+    \item 具备从需求拆解、方案设计、建模仿真到调试复现的完整课程设计经历，能够将控制理论应用于发动机台架测控与瞬态油膜补偿问题。
+    \item 熟练使用 \textbf{MATLAB/Simulink、CARLA、CAD 与 NI Multisim}，并能利用 AI Agent 提升资料检索、代码调试和方案迭代效率。
+\end{itemize}
+
+
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}
 \textbf{浙江大学} \hfill 2023.09 -- 至今\\[0.5em]
 车辆工程 \quad 本科
 \begin{itemize}[nosep]
-    \item \textbf{核心课程：} 工程热力学（甲）、传热学（甲）、电工电子学、工程图学、理论力学（甲）、材料力学（乙）、自动控制理论、汽车电子与控制、汽车动力系统原理、汽车构造、汽车理论、汽车设计、设计与制造II
+    \item \textbf{车辆与动力：} 汽车构造、汽车理论、汽车设计、汽车动力系统原理
+    \item \textbf{控制与电子：} 自动控制理论、汽车电子与控制、电工电子学
+    \item \textbf{力学与热流：} 工程热力学（甲）、传热学（甲）、理论力学（甲）、材料力学（乙）
+    \item \textbf{工程实践：} 工程图学、设计与制造II
 \end{itemize}
 
 
@@ -132,12 +143,12 @@
 
 
 % --- 第一个项目 ---
-\textbf{基于CARLA的智能驾驶关键场景虚拟仿真} \hfill 课程设计 \titlebreak
-围绕智能驾驶风险场景开展课程设计，完成场景需求拆解、仿真环境搭建和运行验证。
+\textbf{基于CARLA的智能驾驶危险场景仿真与测试} \hfill 课程设计 \titlebreak
+面向智能驾驶风险验证需求，完成危险场景设计、虚拟环境搭建和仿真测试闭环。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{场景设计：} 完成危险交通场景的需求分析与场景要素设计，明确道路、车辆、障碍物及动态事件之间的交互关系。
-    \item \textbf{仿真实现：} 基于 \textbf{CARLA} 搭建虚拟驾驶环境，配置车辆与传感器，完成关键风险场景的还原和测试。
-    \item \textbf{调试与复现：} 对仿真程序进行调试和问题定位，整理场景复现流程、实验结果及小组展示材料。
+    \item \textbf{场景建模：} 拆解道路拓扑、交通参与者、障碍物与动态事件，构建具备风险性与可复现性的测试场景。
+    \item \textbf{仿真开发：} 基于 \textbf{CARLA} 配置车辆、传感器和运行参数，实现关键危险场景从环境搭建到动态运行的完整流程。
+    \item \textbf{调试验证：} 定位并解决程序运行与场景复现问题，形成可重复执行的验证流程和展示材料。
 \end{itemize}
 
 
@@ -146,11 +157,12 @@
 
 % --- 第二个项目 ---
 \textbf{发动机台架测控系统设计} \hfill 课程设计 \titlebreak
-围绕发动机台架试验需求，完成传感器选型、测控硬件规划、通信方案及控制策略设计。
+以水力测功器为核心对象，完成发动机台架测控系统的方案规划、硬件设计和控制策略设计。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{传感器与接口：} 针对转速、扭矩、油门位置、水温、机油压力及进排气温度/压力等参数，完成传感器选型与接口电路设计。
-    \item \textbf{测控系统：} 基于微控制器设计多路 A/D、DI 输入与 PWM、DO 输出方案，并规划人机接口和上位机通信功能。
-    \item \textbf{通信与控制：} 比较 RS-232/RS-485 与 CAN 通信方案，设计基于 \textbf{PID} 的定转速或定扭矩控制策略及软件流程。
+    \item \textbf{系统规划：} 梳理发动机台架出厂试验流程，完成测控系统布置框图和硬件整体架构设计。
+    \item \textbf{传感器与接口：} 针对转速、扭矩、油门位置、水温、机油压力及进排气参数完成传感器选型与接口电路设计。
+    \item \textbf{采集与执行：} 基于微控制器规划多路 A/D、DI 输入和 PWM、DO 输出，并设计人机接口与上位机通信功能。
+    \item \textbf{通信与控制：} 比较 RS-232、RS-485 与 CAN 通信方案，设计基于 \textbf{PID} 的定转速或定扭矩控制策略及软件流程。
 \end{itemize}
 
 
@@ -159,24 +171,25 @@
 
 % --- 第三个项目 ---
 \textbf{进气道湿壁油膜建模与前馈补偿仿真} \hfill 课程设计 \titlebreak
-针对进气道喷射汽油机瞬态工况下的湿壁油膜效应，开展建模、仿真和补偿策略研究。
+针对进气道喷射汽油机瞬态空燃比控制问题，建立湿壁油膜模型并验证前馈补偿策略。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{机理与建模：} 分析燃油附着、蒸发及动态传输过程，构建进气道湿壁油膜模型。
-    \item \textbf{仿真分析：} 基于 \textbf{Simulink} 搭建模型，分析油膜参数 \(X\)、\(\tau\) 对燃油动态传输过程的影响。
-    \item \textbf{补偿验证：} 设计前馈油膜补偿器，在 \(X=0.65\)、\(\tau=0.35\) 条件下开展仿真验证，并总结工程应用中的限制与改进方向。
+    \item \textbf{问题建模：} 分析燃油附着、蒸发和动态传输机理，建立湿壁油膜模型，明确其对缸内空燃比偏差的影响。
+    \item \textbf{仿真分析：} 基于 \textbf{Simulink} 分析油膜参数 \(X\)、\(\tau\) 对燃油动态传输过程的敏感性。
+    \item \textbf{控制优化：} 设计前馈油膜补偿器并在 \(X=0.65\)、\(\tau=0.35\) 条件下验证，分析参数适配、鲁棒性与实时性问题。
 \end{itemize}
 
 
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 专业技能}
 \begin{itemize}[nosep]
+    \item \textbf{工程能力：} 测控系统方案设计、传感器选型与接口、PID 控制、CAN/RS-485/RS-232 通信
     \item \textbf{建模与仿真：} MATLAB、Simulink、CARLA
-    \item \textbf{工程软件：} CAD、NI Multisim、WPS 等办公软件
+    \item \textbf{设计软件：} CAD、NI Multisim、WPS
     \item \textbf{AI 工具：} Codex、DeepSeek Harness 等 AI Agent
     \item \textbf{英语能力：} CET-6 474
 \end{itemize}
 
 
-\section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ 其他信息}
+\section{\makebox[\widthof{\faEnvelopeO}][c]{\color{CVBlue}\faEnvelopeO}\ 其他信息}
 \begin{itemize}[parsep=0.5ex]
     \item \textbf{GitHub：} \href{https://github.com/dhu977668-netizen}{https://github.com/dhu977668-netizen}
 \end{itemize}

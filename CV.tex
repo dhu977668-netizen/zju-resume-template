@@ -9,10 +9,9 @@
 \urlstyle{tt}
 \usepackage{xcolor}
 \definecolor{CVBlue}{RGB}{23,110,191}
+\definecolor{SoftGray}{RGB}{105,105,105}
 \usepackage{calc}
 \usepackage{graphicx}
-\usepackage{tikz}
-\usetikzlibrary{calc}
 \usepackage{fontspec}
 \usepackage{xeCJK}
 \usepackage{enumitem}
@@ -33,49 +32,50 @@
 ]{NotoSansSC-Regular.ttf}
 
 
-\usepackage{relsize}
-\usepackage{xspace}
 \usepackage{fontawesome}
-
-
 \usepackage[
     a4paper,
-    left=1.1cm,
-    right=1.1cm,
-    top=1.1cm,
-    bottom=0.7cm,
+    left=1.3cm,
+    right=1.3cm,
+    top=1.0cm,
+    bottom=0.8cm,
     nohead
 ]{geometry}
 
 
-\renewcommand{\baselinestretch}{1.12}
+\renewcommand{\baselinestretch}{1.15}
 
 
 \usepackage{titlesec}
 \setlist{noitemsep}
-\setlist[itemize]{topsep=0.05em, leftmargin=*}
+\setlist[itemize]{topsep=0.12em, itemsep=0.06em, leftmargin=1.1em}
 
 
 \newlength{\interProjectSpacing}
-\setlength{\interProjectSpacing}{0.25em}
+\setlength{\interProjectSpacing}{0.34em}
 \newcommand{\projectsep}{\vspace{\interProjectSpacing}}
 
 
 \newlength{\intraProjectTitleSep}
-\setlength{\intraProjectTitleSep}{0.20em}
+\setlength{\intraProjectTitleSep}{0.16em}
 \newcommand{\titlebreak}{\\[\intraProjectTitleSep]}
 
 
 \newlength{\intraProjectListTopSep}
-\setlength{\intraProjectListTopSep}{0.08em}
+\setlength{\intraProjectListTopSep}{0.05em}
 
 
 \titleformat{\section}
-{\normalsize\bfseries\raggedright}
+{\large\bfseries\raggedright}
 {}{0em}
 {}
 [{\color{CVBlue}\titlerule}]
-\titlespacing*{\section}{0cm}{*0.60}{*0.35}
+\titlespacing*{\section}{0cm}{*0.85}{*0.45}
+
+
+\newcommand{\infoRow}[2]{%
+    \textbf{#1} & #2 \\[0.22em]
+}
 
 
 \begin{document}
@@ -83,37 +83,41 @@
 
 
 \noindent
-\begin{minipage}[c]{0.30\textwidth}
-    \includegraphics[height=4.6cm]{zju.png}
+\begin{minipage}[c]{0.27\textwidth}
+    \includegraphics[height=4.4cm]{zju.png}
 \end{minipage}
 \hfill
-\begin{minipage}[c]{0.66\textwidth}
+\begin{minipage}[c]{0.70\textwidth}
     \centering
-    {\fontsize{18}{21}\selectfont\bfseries 胡光望}\\[0.25em]
-    {\fontsize{11.5}{14}\selectfont 浙江大学能源工程学院车辆工程}\\[0.22em]
-    {\fontsize{10.2}{12.5}\selectfont 出生年月：2004.10 \quad 籍贯：重庆彭水 \quad 政治面貌：共青团员}\\[0.10em]
-    {\fontsize{10.2}{12.5}\selectfont 电话：19557148649 \quad 邮箱：dhu977668@gmail.com}
+    {\fontsize{18}{21}\selectfont\bfseries 胡光望}\\[0.22em]
+    {\fontsize{11.5}{14}\selectfont 浙江大学能源工程学院车辆工程}\\[0.30em]
+    {\fontsize{10}{12.5}\selectfont 2004.10 \quad 重庆彭水 \quad 共青团员}\\[0.08em]
+    {\fontsize{10}{12.5}\selectfont 19557148649 \quad dhu977668@gmail.com}
 \end{minipage}
+
+
 \par\vspace{0.35em}
+{\color{SoftGray}\rule{\textwidth}{0.35pt}}
+\vspace{0.15em}
 
 
 \section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ 个人概述}
 \begin{itemize}[nosep]
     \item 浙江大学能源工程学院车辆工程本科在读，\textbf{主修绩点 4.21}。课程基础覆盖车辆动力、工程热力学、传热学、电工电子和自动控制。
-    \item 具备较强的自主学习与学科交叉意识，能够在课程项目中独立学习 \textbf{CARLA/Python、Simulink、LabVIEW、MWORKS} 等工具，并将机械、能源、控制和数据采集问题串联起来完成方案设计与验证。
-    \item 项目经历覆盖\textbf{智能驾驶场景仿真、发动机台架测控、动力系统建模与补偿、NI 数据采集}，能够从需求分析推进到仿真、调试和量化结论。
+    \item 具备较强的自主学习与学科交叉意识，能够自主学习并使用 \textbf{Python、C、CARLA、Simulink、LabVIEW} 等工具，将机械、能源、控制和数据采集问题串联起来完成方案设计与验证。
 \end{itemize}
 
 
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}
-\textbf{浙江大学} \hfill 2023.09 -- 至今\\[0.25em]
-能源工程学院 \quad 车辆工程 \quad 本科
-\begin{itemize}[nosep]
-    \item \textbf{车辆与动力：} 汽车构造、汽车理论、汽车设计、汽车动力系统原理、新能源汽车技术
-    \item \textbf{热能与流体：} 工程热力学（甲）、传热学（甲）
-    \item \textbf{控制与电子：} 自动控制理论、汽车电子与控制、电工电子学及实验
-    \item \textbf{机械与工程实践：} 设计与制造 I/II/III、电子工程训练
-\end{itemize}
+\textbf{浙江大学} \hfill 2023.09 -- 至今\\[0.22em]
+能源工程学院 \quad 车辆工程 \quad 本科\\[0.32em]
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}p{2.5cm}p{14.8cm}@{}}
+    \textbf{车辆与动力} & 汽车构造、汽车理论、汽车设计、汽车动力系统原理、新能源汽车技术 \\
+    \textbf{热能与流体} & 工程热力学（甲）、传热学（甲） \\
+    \textbf{控制与电子} & 自动控制理论、汽车电子与控制、电工电子学及实验 \\
+    \textbf{机械与实践} & 设计与制造 I/II/III、电子工程训练 \\
+\end{tabular}
 
 
 \section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 项目经历}
@@ -121,8 +125,8 @@
 
 \textbf{基于 CARLA 的雨夜行人横穿避让场景仿真} \hfill 课程项目 \titlebreak
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item 构建夜间强降雨、前车急刹、行人横穿叠加场景；基于语义 LiDAR 判断风险，触发“紧急左变道--回正--制动”策略。
-    \item \textbf{控制策略：} 设计“紧急左变道--回正--制动”状态机，对比分析 \textbf{PID 与模糊控制} 在横纵向避让优化中的适用性。
+    \item 构建夜间强降雨、前车急刹、行人横穿叠加场景，配置湿滑路面、雾灯和固定地图点位，提升实验复现性。
+    \item \textbf{控制策略：} 基于语义 LiDAR 判断风险，设计“紧急左变道--回正--制动”状态机，对比分析 \textbf{PID 与模糊控制} 在横纵向避让优化中的适用性。
 \end{itemize}
 
 
@@ -157,14 +161,15 @@
 
 
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 专业技能}
-\begin{itemize}[nosep]
-    \item \textbf{编程语言：} Python、C
-    \item \textbf{建模与仿真：} MATLAB/Simulink、CARLA、MWORKS
-    \item \textbf{测控与电路：} NI LabVIEW、NI Multisim
-    \item \textbf{设计与办公：} CAD、WPS
-    \item \textbf{AI 工具：} Codex、DeepSeek Harness
-    \item \textbf{语言能力：} CET-6 474
-\end{itemize}
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{@{}p{2.6cm}p{14.7cm}@{}}
+    \textbf{编程语言} & Python、C \\
+    \textbf{建模与仿真} & MATLAB/Simulink、CARLA、MWORKS \\
+    \textbf{测控与电路} & NI LabVIEW、NI Multisim \\
+    \textbf{设计与办公} & CAD、WPS \\
+    \textbf{AI 工具} & Codex、DeepSeek Harness \\
+    \textbf{语言能力} & CET-6 474 \\
+\end{tabular}
 
 
 \end{document}

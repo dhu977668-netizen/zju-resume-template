@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[11pt]{article}
 
 
 \setlength{\parindent}{0pt}
@@ -82,17 +82,22 @@
 \pagenumbering{gobble}
 
 
-\begin{tikzpicture}[remember picture, overlay]
-    \node[anchor = north west] at ($(current page.north west)+(0.35cm,+0.35cm)$) {\includegraphics[height=3.2cm]{zju.png}};
-\end{tikzpicture}%
-
-\centerline{\LARGE\bfseries{胡光望}}
-\vspace{1.15cm}
+\noindent
+\begin{minipage}[c]{0.28\textwidth}
+    \includegraphics[height=3.6cm]{zju.png}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.68\textwidth}
+    \centering
+    {\fontsize{18}{21}\selectfont\bfseries 胡光望}\\[0.25em]
+    {\fontsize{11.5}{14}\selectfont 浙江大学能源工程学院车辆工程}
+\end{minipage}
+\par\vspace{0.35em}
 
 
 \section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ 个人概述}
 \begin{itemize}[nosep]
-    \item 浙江大学能源工程学院车辆工程本科在读，\textbf{主修绩点 4.21/5.0}。课程基础覆盖车辆动力、工程热力学、传热学、电工电子和自动控制。
+    \item 浙江大学能源工程学院车辆工程本科在读，\textbf{主修绩点 4.21}。课程基础覆盖车辆动力、工程热力学、传热学、电工电子和自动控制。
     \item 具备较强的自主学习与学科交叉意识，能够在课程项目中独立学习 \textbf{CARLA/Python、Simulink、LabVIEW/DAQmx、MWORKS} 等工具，并将机械、能源、控制和数据采集问题串联起来完成方案设计与验证。
     \item 项目经历覆盖\textbf{智能驾驶场景仿真、发动机台架测控、动力系统建模与补偿、NI 数据采集}，能够从需求分析推进到仿真、调试和量化结论。
 \end{itemize}
@@ -102,7 +107,10 @@
 \textbf{浙江大学} \hfill 2023.09 -- 至今\\[0.25em]
 能源工程学院 \quad 车辆工程 \quad 本科
 \begin{itemize}[nosep]
-    \item \textbf{核心课程：} 设计与制造 I/II/III、新能源汽车技术、自动控制理论、汽车电子与控制、汽车动力系统原理、工程热力学（甲）、传热学（甲）、电工电子学及实验、电子工程训练
+    \item \textbf{车辆与动力：} 汽车构造、汽车理论、汽车设计、汽车动力系统原理、新能源汽车技术
+    \item \textbf{热能与流体：} 工程热力学（甲）、传热学（甲）
+    \item \textbf{控制与电子：} 自动控制理论、汽车电子与控制、电工电子学及实验
+    \item \textbf{机械与工程实践：} 设计与制造 I/II/III、电子工程训练
 \end{itemize}
 
 
@@ -111,9 +119,8 @@
 
 \textbf{基于 CARLA 的雨夜行人横穿避让场景仿真} \hfill 课程项目 \titlebreak
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{场景复现：} 构建夜间强降雨、前车急刹和行人横穿叠加的危险工况，配置湿滑路面、雾灯与固定地图点位，提升实验可复现性。
-    \item \textbf{感知与控制：} 使用语义 LiDAR 进行黑盒风险识别，加入 0.25 s 延迟、0.75 m 测距噪声和 12\% 丢帧概率；依据距离和相对速度触发“紧急左变道--回正--制动”策略。
-    \item \textbf{量化结果：} 最小 TTC 为 0.01 s，最大左移 4.09 m，最终航向误差 2.33°，仿真中实现无碰撞避险。
+    \item 构建夜间强降雨、前车急刹、行人横穿叠加场景；基于语义 LiDAR 判断风险，触发“紧急左变道--回正--制动”策略。
+    \item 仿真结果：最小 TTC 0.01 s、最大左移 4.09 m、最终航向误差 2.33°，实现无碰撞避险。
 \end{itemize}
 
 
@@ -122,9 +129,8 @@
 
 \textbf{基于水力测功器的发动机台架测控系统设计} \hfill 课程项目 \titlebreak
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{系统方案：} 规划“发动机--联轴器--水力测功器--测控柜--上位机”总体结构，完成转速、扭矩、油门、水温、油压和进排气等参数的传感器选型与接口设计。
-    \item \textbf{硬件与通信：} 以 \textbf{STM32F407} 和 16 位 ADC 为核心规划多路采集、PWM/DO 输出及 HMI；设计 500 kbit/s CAN 主通道和 RS-485/Modbus 备用通道，并考虑心跳、超时和安全联锁。
-    \item \textbf{控制策略：} 设计前馈加位置式 \textbf{PID} 的定扭矩控制方案，分析积分限幅、微分滤波、输出限幅和速率限制，并给出按转速分区整定的 Simulink 建模方案。
+    \item 设计“发动机--水力测功器--测控柜--上位机”总体方案，规划多类传感器、\textbf{STM32} 采集和 CAN/RS-485 通信。
+    \item 提出前馈加位置式 \textbf{PID} 的定扭矩控制方案，设计积分限幅、微分滤波、速率限制及 Simulink 建模思路。
 \end{itemize}
 
 
@@ -133,9 +139,8 @@
 
 \textbf{进气道湿壁油膜建模与前馈补偿} \hfill 课程项目 \titlebreak
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{模型分析：} 基于油膜流量关系建立湿壁模型，使用 \textbf{Simulink} 比较附壁系数 \(X\) 和时间常数 \(\tau\) 对燃油动态传输的影响。
-    \item \textbf{补偿设计：} 设计前馈补偿器，仿真中喷油指令峰值约 2.85，随后指数衰减至稳态 1，补偿后入缸燃油基本贴合目标需求。
-    \item \textbf{工程反思：} 指出固定 \(X\)、\(\tau\) 在大节气门或不同水温下会产生过补偿或欠补偿，提出基于压力、转速、壁温等参数查表修正的自适应补偿方向。
+    \item 建立进气道湿壁油膜 \textbf{Simulink} 模型，分析附壁系数 \(X\) 和时间常数 \(\tau\) 对燃油动态传输的影响。
+    \item 设计前馈补偿器使入缸燃油贴合目标；提出基于压力、转速和壁温的查表自适应补偿方向。
 \end{itemize}
 
 
@@ -144,16 +149,17 @@
 
 \textbf{基于 NI cDAQ 与 LabVIEW 的共轨压力/转速同步采集} \hfill 自主实践 \titlebreak
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{采集系统：} 在 NI MAX 中配置 cDAQ-9174、NI 9205 模拟输入和 NI 9401 计数器输入，使用 DAQmx 虚拟通道同步采集 0--5 V 压力信号与转速方波。
-    \item \textbf{软件开发：} 搭建 While 循环、100 ms 刷新和并行读取流程，并完成任务启动、停止与资源释放；使用移位寄存器和噪声模型模拟发动机转速惯性，实现动态仪表响应。
+    \item 基于 NI cDAQ-9174、9205 和 9401 搭建压力/转速双通道 DAQmx 采集程序，完成任务管理与动态显示。
+    \item 使用移位寄存器与噪声模型模拟转速惯性，解决仿真数字通道动态响应不足的问题。
 \end{itemize}
 
 
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 专业技能}
 \begin{itemize}[nosep]
     \item \textbf{建模与仿真：} MATLAB/Simulink、CARLA、MWORKS
-    \item \textbf{数据采集与控制：} NI LabVIEW/DAQmx、Multisim、传感器选型与信号调理、CAN/RS-485、PID 控制
-    \item \textbf{工程实践：} CAD、电子焊接与装配、智能插座和小车调试、WPS
+    \item \textbf{测控与电路：} NI LabVIEW/DAQmx、NI Multisim
+    \item \textbf{设计与办公：} CAD、WPS
+    \item \textbf{AI 工具：} Codex、DeepSeek Harness
     \item \textbf{语言能力：} CET-6 474
 \end{itemize}
 

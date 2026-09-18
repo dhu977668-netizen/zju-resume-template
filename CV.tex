@@ -48,16 +48,16 @@
 ]{geometry}
 
 
-\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\baselinestretch}{1.12}
 
 
 \usepackage{titlesec}
 \setlist{noitemsep}
-\setlist[itemize]{topsep=0.10em, leftmargin=*}
+\setlist[itemize]{topsep=0.05em, leftmargin=*}
 
 
 \newlength{\interProjectSpacing}
-\setlength{\interProjectSpacing}{0.45em}
+\setlength{\interProjectSpacing}{0.25em}
 \newcommand{\projectsep}{\vspace{\interProjectSpacing}}
 
 
@@ -75,7 +75,7 @@
 {}{0em}
 {}
 [{\color{CVBlue}\titlerule}]
-\titlespacing*{\section}{0cm}{*0.75}{*0.45}
+\titlespacing*{\section}{0cm}{*0.60}{*0.35}
 
 
 \begin{document}
@@ -83,11 +83,11 @@
 
 
 \noindent
-\begin{minipage}[c]{0.28\textwidth}
-    \includegraphics[height=3.6cm]{zju.png}
+\begin{minipage}[c]{0.30\textwidth}
+    \includegraphics[height=4.6cm]{zju.png}
 \end{minipage}
 \hfill
-\begin{minipage}[c]{0.68\textwidth}
+\begin{minipage}[c]{0.66\textwidth}
     \centering
     {\fontsize{18}{21}\selectfont\bfseries 胡光望}\\[0.25em]
     {\fontsize{11.5}{14}\selectfont 浙江大学能源工程学院车辆工程}\\[0.22em]
@@ -100,7 +100,7 @@
 \section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ 个人概述}
 \begin{itemize}[nosep]
     \item 浙江大学能源工程学院车辆工程本科在读，\textbf{主修绩点 4.21}。课程基础覆盖车辆动力、工程热力学、传热学、电工电子和自动控制。
-    \item 具备较强的自主学习与学科交叉意识，能够在课程项目中独立学习 \textbf{CARLA/Python、Simulink、LabVIEW/DAQmx、MWORKS} 等工具，并将机械、能源、控制和数据采集问题串联起来完成方案设计与验证。
+    \item 具备较强的自主学习与学科交叉意识，能够在课程项目中独立学习 \textbf{CARLA/Python、Simulink、LabVIEW、MWORKS} 等工具，并将机械、能源、控制和数据采集问题串联起来完成方案设计与验证。
     \item 项目经历覆盖\textbf{智能驾驶场景仿真、发动机台架测控、动力系统建模与补偿、NI 数据采集}，能够从需求分析推进到仿真、调试和量化结论。
 \end{itemize}
 
@@ -122,7 +122,7 @@
 \textbf{基于 CARLA 的雨夜行人横穿避让场景仿真} \hfill 课程项目 \titlebreak
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
     \item 构建夜间强降雨、前车急刹、行人横穿叠加场景；基于语义 LiDAR 判断风险，触发“紧急左变道--回正--制动”策略。
-    \item 仿真结果：最小 TTC 0.01 s、最大左移 4.09 m、最终航向误差 2.33°，实现无碰撞避险。
+    \item \textbf{控制策略：} 设计“紧急左变道--回正--制动”状态机，对比分析 \textbf{PID 与模糊控制} 在横纵向避让优化中的适用性。
 \end{itemize}
 
 
@@ -151,7 +151,7 @@
 
 \textbf{基于 NI cDAQ 与 LabVIEW 的共轨压力/转速同步采集} \hfill 自主实践 \titlebreak
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item 基于 NI cDAQ-9174、9205 和 9401 搭建压力/转速双通道 DAQmx 采集程序，完成任务管理与动态显示。
+    \item 基于 NI cDAQ-9174、9205 和 9401 搭建压力/转速双通道 LabVIEW 采集程序，完成任务管理与动态显示。
     \item 使用移位寄存器与噪声模型模拟转速惯性，解决仿真数字通道动态响应不足的问题。
 \end{itemize}
 
@@ -160,7 +160,7 @@
 \begin{itemize}[nosep]
     \item \textbf{编程语言：} Python、C
     \item \textbf{建模与仿真：} MATLAB/Simulink、CARLA、MWORKS
-    \item \textbf{测控与电路：} NI LabVIEW/DAQmx、NI Multisim
+    \item \textbf{测控与电路：} NI LabVIEW、NI Multisim
     \item \textbf{设计与办公：} CAD、WPS
     \item \textbf{AI 工具：} Codex、DeepSeek Harness
     \item \textbf{语言能力：} CET-6 474
